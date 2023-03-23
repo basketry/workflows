@@ -28,4 +28,4 @@ jobs:
       - name: Run build script
         run: npm run build
       - name: Run test script
-        run: npm test --passWithNoTests
+        run: npm test
