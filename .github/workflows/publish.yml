@@ -8,12 +8,6 @@ on:
       preid:
         description: 'The "prerelease identifier" to use as a prefix for the "prerelease" part of a semver.'
         required: false
-      github_token:
-        description: 'Github token'
-        required: true
-      npm_token:
-        description: 'NPM token'
-        required: true
 
 jobs:
   version:
@@ -28,5 +22,5 @@ jobs:
         with:
           newversion: ${{ github.event.inputs.newversion }}
           preid: ${{ github.event.inputs.preid }}
-          github_token: ${{ github.event.inputs.github_token }}
-          npm_token: ${{ github.event.inputs.npm_token }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          npm_token: ${{ secrets.NPM_TOKEN }}
