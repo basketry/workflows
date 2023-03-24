@@ -5,9 +5,11 @@ on:
       newversion:
         description: 'npm version [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease | from-git]'
         required: true
+        type: string
       preid:
         description: 'The "prerelease identifier" to use as a prefix for the "prerelease" part of a semver.'
         required: false
+        type: string
 
 jobs:
   version:
